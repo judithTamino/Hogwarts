@@ -6,6 +6,3 @@ export const navLinksSx = {
   textDecoration: 'none',
 };
 
-// export const closeBtnSx = {
-//   position: 'abslout'
-// }

@@ -5,7 +5,7 @@ import {
   Icon,
   IconButton,
   List,
-  ListItem,
+  ListItemButton,
   ListItemText,
   Typography,
 } from '@mui/material';
@@ -19,6 +19,7 @@ interface NavMobileProps {
 
 const NavMobile: FunctionComponent<NavMobileProps> = ({ navLinks }) => {
   const [openDrawer, setOpenDrawer] = useState<boolean>(false);
+
   return (
     <>
       <Drawer
@@ -29,7 +30,7 @@ const NavMobile: FunctionComponent<NavMobileProps> = ({ navLinks }) => {
         <Container sx={{ position: 'relative' }}>
           <List>
             {navLinks.map((navLink, index) => (
-              <ListItem
+              <ListItemButton
                 key={index}
                 onClick={() => setOpenDrawer(false)}
                 sx={{
@@ -47,7 +48,7 @@ const NavMobile: FunctionComponent<NavMobileProps> = ({ navLinks }) => {
                     {navLink.name}
                   </Typography>
                 </ListItemText>
-              </ListItem>
+              </ListItemButton>
             ))}
           </List>
           <IconButton

@@ -10,9 +10,24 @@ const Layout: FunctionComponent<LayoutProps> = () => {
       sx={{
         overflow: 'hidden',
         height: '100vh',
+        display: 'flex',
+        flexDirection: 'column',
+        gap: 3,
       }}
     >
       <Navbar />
+
+      <Box
+        sx={{
+          backgroundColor: '#1F232C',
+          color: '#fff',
+          padding: '100px 0',
+          position: 'relative',
+          overflow: 'hidden',
+        }}
+      >
+        hello
+      </Box>
     </Box>
   );
 };
