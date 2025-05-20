@@ -1,11 +1,11 @@
 import type { FunctionComponent } from 'react';
 import { Routes, Route } from 'react-router-dom';
-import Home from '../pages/Home';
-import About from '../pages/About';
-import Academics from '../pages/Academics';
-import News from '../pages/News';
-import SchoolLife from '../pages/SchoolLife';
-import Contact from '../pages/Contact';
+import Home from '../pages/Home/Home';
+import About from '../pages/About/About';
+import Academics from '../pages/Academics/Academics';
+import News from '../pages/News/News';
+import SchoolLife from '../pages/SchoolLife/SchoolLife';
+import Contact from '../pages/Contact/Contact';
 
 interface AppRoutesProps {}
 
