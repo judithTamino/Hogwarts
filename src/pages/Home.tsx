@@ -1,10 +1,9 @@
+
 import type { FunctionComponent } from 'react';
-import Layout from '../layout/Layout';
 
 interface HomeProps {}
-
 const Home: FunctionComponent<HomeProps> = () => {
-  return <><Layout></Layout></>;
+  return <>Home</>;
 };
 
 export default Home;
