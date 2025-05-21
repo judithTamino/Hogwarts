@@ -1,4 +1,4 @@
-import { type FunctionComponent } from 'react';
+import { useState, type FunctionComponent } from 'react';
 import { NavLink } from 'react-router-dom';
 import './Navbar.css';
 
@@ -32,16 +32,25 @@ const navLinks: Record<string, string>[] = [
 ];
 
 const Navbar: FunctionComponent<NavbarProps> = () => {
+  const [showMenu, setShowMenu] = useState<boolean>(false);
+  const closeMenu = () => setShowMenu(false);
+
   return (
     <header className='header'>
       <nav className='nav container'>
         <img className='nav-logo' src='./logo.png' alt='school logo' />
 
-        <div className='nav-menu'>
+        <div className={`nav-menu ${showMenu && 'show-menu'}`}>
           <ul className='nav-list'>
             {navLinks.map((page, index) => (
               <li key={index} className='nav-item'>
-                <NavLink className='nav-link' to={`${page.link}`}>
+                <NavLink
+                  to={`${page.link}`}
+                  className={({ isActive }) =>
+                    isActive ? 'active-link' : 'nav-link'
+                  }
+                  onClick={closeMenu}
+                >
                   {page.name}
                 </NavLink>
               </li>
@@ -49,12 +58,12 @@ const Navbar: FunctionComponent<NavbarProps> = () => {
           </ul>
 
           {/* <-- close button --> */}
-          <div className='nav-close'>
+          <div className='nav-close' onClick={closeMenu}>
             <i className='ri-close-line' />
           </div>
         </div>
 
-        <div className='nav-toggle'>
+        <div className='nav-toggle' onClick={() => setShowMenu(true)}>
           <i className='ri-menu-line' />
         </div>
       </nav>
