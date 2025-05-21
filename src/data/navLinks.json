@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Home",
+    "link": "/"
+  },
+  {
+    "name":"About",
+    "link": "/about"
+  },
+  {
+    "name": "Academic",
+    "link": "/academics"
+  },
+  {
+    "name": "News",
+    "link": "/news"
+  },
+  {
+    "name": "School Life",
+    "link": "/school"
+  },
+  {
+    "name": "Contact",
+    "link": "/contact"
+  }
+]
