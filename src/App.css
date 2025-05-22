@@ -1,5 +1,5 @@
 /*=============== GOOGLE FONTS ===============*/
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
 
 :root {
   /*========== colors ==========*/
@@ -11,11 +11,15 @@
   --body-color: #f5f5f5;
   --card-color: #fff;
   /*========== font & typography ==========*/
-  --body-font: "Roboto", sans-serif;
+  --body-font: "Poppins", sans-serif;
   --h1-font-size: 3.2rem;
   --h2-font-size: 2.8rem;
   --normal-font-size: 1.6rem;
   --small-font-size: 1.4rem;
+  /*==== font weight ====*/
+  --font-regular: 400;
+  --font-semi-bold: 600;
+  --font-bold: 700;
 }
 
 @media screen and (min-width: 960px) {
@@ -45,6 +49,9 @@ body, input, button, textarea {
 }
 
 body {
+  width: 100vw;
+  height: 100vh;
+  font-weight: 400;
   color: var(--text-color);
   background-color: var(--body-color);
 }
@@ -67,6 +74,10 @@ a {
   display: inline-block;
 }
 
+h1, h2, h3 {
+  font-weight: 400;
+}
+
 /*=============== REUSABLE CSS CLASSES ===============*/
 .container {
   max-width: 1024px;
@@ -79,6 +90,20 @@ a {
 
 .grid {
   display: grid;
+}
+
+.button {
+  display: inline-block;
+  background-color: var(--first-color);
+  color: var(--text-color);
+  padding: .5em 1.5em;
+  border-radius: .5rem;
+  font-weight: var(--font-semi-bold);
+  transition: .3s;
+}
+
+.button:hover {
+  background-color: var(--first-color-alt);
 }
 
 /*========== BREAKPOINTS ==========*/

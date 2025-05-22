@@ -1,0 +1,14 @@
+.hero-curved {
+  background-color: var(--secondary-color);
+  color: var(--body-color);
+}
+
+.hero-title {
+  font-size: var(--h1-font-size);
+  font-weight: var(--font-bold);
+  margin-bottom: 3.2rem;
+}
+
+.hero-description {
+  margin-bottom: 2.4rem;
+}
